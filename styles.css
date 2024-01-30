@@ -1,0 +1,36 @@
+/* styles.css */
+
+/* state the overall style */
+
+* {
+    font-family: "Helvetica", "Open Sans", sans-serif;
+}
+img {
+    height:500px;
+    width: 500px;
+    object-fit: cover;
+}
+body {
+    font-size: 20px;
+    color: darkblue
+}
+h1 {
+    font-size: 30px;
+    color: aliceblue;
+    background-color: rgb(40,60,0);
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 10px;
+}
+/* specify styles for elements */
+ul {
+    list-style: square;
+}
+.recipe-title {
+    font-family: "Baskerville", "Palatino", serif;
+    font-size: 28px;
+    color:rgb(88, 0, 31);
+    text-align: center;
+}
+
+/* image captions */
