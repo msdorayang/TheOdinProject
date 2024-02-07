@@ -1,0 +1,90 @@
+body {
+background-color: #10040b;
+font-family: "Quicksand", sans-serif;
+font-size: 1rem;
+color: white;
+}
+
+img {
+max-height: 20rem;
+width: auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+
+}
+
+button {
+
+}
+
+button .primary{
+
+}
+
+button .secondary {
+
+}
+
+.hero {
+
+}
+
+.logo {
+    font-family: 'Major Mono Display',monospace;
+    font-size: 4rem;
+}
+.content {
+
+}
+
+.headline {
+
+}
+
+.left-items {
+
+}
+
+.right-items {
+
+}
+
+.information {
+    background-color: white;
+    color: #10040b;
+}
+
+.testimonial {
+
+}
+
+.quote {
+
+}
+
+.quoted-person {
+
+}
+
+.CTC {
+
+}
+.footer {
+
+}
