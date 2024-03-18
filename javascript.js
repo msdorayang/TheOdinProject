@@ -13,6 +13,7 @@ function getComputerChoice(){
 
 //function for users to select their choice
 function getUserChoice () {
-    let userChoice = prompt ("Rock, paper, or scissors?");
-    return UserChoice;
+    let userChoice = prompt ("rock, paper, or scissors?");
+    userChoice = userChoice.toLowerCase();
+    return userChoice;
 }
