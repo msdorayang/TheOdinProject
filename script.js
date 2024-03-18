@@ -33,24 +33,25 @@ function playRound () {
     console.log("The computer has selected " + computerChoice);
     // user and computer choosing the same thing
     if (userChoice === "rock" && computerChoice === "rock" || userChoice === "scissors" && computerChoice === "scissors" || userChoice === "paper" && computerChoice === "paper") {
-        result = "It's a tie!";
+        roundResult = "It's a tie!";
     } 
     // user wins
     else if (userChoice === "rock" && computerChoice === "scissors" || userChoice === "scissors" && computerChoice === "paper" || userChoice === "paper" && computerChoice === "rock") {
         userScore = ++userScore;
-        result = "You win!";
+        roundResult = "You win!";
     }
     // user loses
     else if (userChoice === "rock" && computerChoice === "paper" || userChoice === "scissors" && computerChoice === "rock" || userChoice === "paper" && computerChoice === "scissors") {
         computerScore = ++computerScore;
-        result = "You lose!";
+        roundResult = "You lose!";
     } else {
-        result = "Invalid entry, try again!";
+        roundResult = "Invalid Entry!";
     }
-    console.log(result);
+    console.log(roundResult);
     console.log("Computer: " + computerScore + "  |  You: " + userScore);
 }
 
+//10 rounds rps with a final score
 function playGame() {
     var computerScore = 0;
     var userScore = 0;
@@ -59,4 +60,18 @@ function playGame() {
     playRound();
     playRound();
     playRound();
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    // show winner
+    if (userScore > computerScore) {
+        finalResult = "Yay! You won the game!"
+    } else if (computerScore > userScore) {
+        finalResult = "Sorry, the computer won!"
+    } else {
+        finalResult = "You tied this game, try again!"
+    }
+    console.log(finalResult);
     }
