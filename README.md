@@ -1,4 +1,10 @@
 # odin-rps
 Rock Paper Scissors
-An implementation of grade-school classic "rock paper scissor" game.
-Currently played in the browser console only.
+
+
+Currently played in the browser console:
+
+For single round, type in
+    playRound();
+For a game of 10 rounds, type in
+    playGame();
