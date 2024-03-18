@@ -1,6 +1,13 @@
+// declare variables
+var computerScore = 0;
+var userScore = 0;
+var computerChoice;
+var userChoice;
+var result;
+
 // function to randomly return "rock", "paper", or "scissors".
 function getComputerChoice(){
-   let computerChoice = Math.floor(Math.random() * 3) + 1
+   var computerChoice = Math.floor(Math.random() * 3) + 1
    if (computerChoice === 1) {
     computerChoice = "rock";
    } else if (computerChoice === 2) {
@@ -13,7 +20,7 @@ function getComputerChoice(){
 
 //function for users to select their choice
 function getUserChoice () {
-    let userChoice = prompt ("rock, paper, or scissors?").toLowerCase();
+    var userChoice = prompt ("rock, paper, or scissors?").toLowerCase();
     return userChoice;
 }
 
@@ -30,13 +37,26 @@ function playRound () {
     } 
     // user wins
     else if (userChoice === "rock" && computerChoice === "scissors" || userChoice === "scissors" && computerChoice === "paper" || userChoice === "paper" && computerChoice === "rock") {
+        userScore = ++userScore;
         result = "You win!";
     }
     // user loses
     else if (userChoice === "rock" && computerChoice === "paper" || userChoice === "scissors" && computerChoice === "rock" || userChoice === "paper" && computerChoice === "scissors") {
+        computerScore = ++computerScore;
         result = "You lose!";
     } else {
-        result = "invalid entry, try again!";
+        result = "Invalid entry, try again!";
     }
     console.log(result);
+    console.log("Computer: " + computerScore + "  |  You: " + userScore);
 }
+
+function playGame() {
+    var computerScore = 0;
+    var userScore = 0;
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    }
