@@ -1,10 +1,7 @@
 // declare variables
 var computerScore = 0;
 var userScore = 0;
-var computerChoice;
-var userChoice;
-var roundResult;
-var finalResult;
+var gameOver = false;
 
 // function to randomly return from rock(1), paper(2), or scissors(3) 
 function getComputerChoice(){
@@ -18,12 +15,6 @@ function getComputerChoice(){
    }
    return computerChoice;
 }
-
-//users select their choice
-// function getUserChoice () {
-//     var userChoice = prompt ("rock, paper, or scissors?").toLowerCase();
-//     return userChoice;
-// }
 
 // event listener to the buttons that call playRound function with the correct userChoice when a button is clicked
 const buttons = document.querySelectorAll('.choice');
@@ -40,24 +31,23 @@ function playRound (userChoice) {
     var computerChoice = getComputerChoice();
     var roundResult = result(userChoice, computerChoice);
     var scoreBoard = "Computer: " + computerScore + "  |  You: " + userScore;
-    var resultMsg = "You have selected " + userChoice + "\nThe computer has selected " + computerChoice + "\n" + roundResult + "\n" + scoreBoard;
-    console.log(resultMsg);
+    var selectionMsg = "You have selected " + userChoice + "<br>The computer has selected " + computerChoice
+    document.getElementById("current-round").innerHTML = selectionMsg + "<br>" + roundResult;
+    document.getElementById("score").innerHTML = "Player: " + userScore + "       |       Computer: " + computerScore;
 }
     // user and computer with same choice
 function result (userChoice, computerChoice) {
     if (userChoice === "rock" && computerChoice === "rock" || userChoice === "scissors" && computerChoice === "scissors" || userChoice === "paper" && computerChoice === "paper") {
-        userScore = ++userScore;
-        computerScore = ++computerScore;
         roundResult = "It's a tie!";
     } 
     // user wins
     else if (userChoice === "rock" && computerChoice === "scissors" || userChoice === "scissors" && computerChoice === "paper" || userChoice === "paper" && computerChoice === "rock") {
-        userScore = ++userScore;
+        userScore++;
         roundResult = "You win!";
     }
     // user loses
     else if (userChoice === "rock" && computerChoice === "paper" || userChoice === "scissors" && computerChoice === "rock" || userChoice === "paper" && computerChoice === "scissors") {
-        computerScore = ++computerScore;
+        computerScore++;
         roundResult = "You lose!";
     } else {
         roundResult = "Invalid Entry!";
@@ -65,32 +55,16 @@ function result (userChoice, computerChoice) {
     return roundResult;
 }
 
-
-
-
-//10 rounds rps with a final score
-function playGame() {
-    computerScore = 0;
-    userScore = 0;
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-    // show final score of the game
-    console.log("Your final score is " + userScore + " & the computer's final score is " + computerScore)
-    // show final result of the game
-    if (userScore > computerScore) {
-        finalResult = "Congratulations, you won!"
-    } else if (computerScore > userScore) {
-        finalResult = "Sorry, you lost!"
-    } else if (computerScore = userScore) {
-        finalResult = "You tied!"
-    }
-    console.log(finalResult);
-    }
+// End game
+if (userScore === 5 && computerScore === 5) {
+    var gameover = true;
+    document.getElementById("winner").innerHTML="You and the computer tied!!"
+} else if (userScore === 5 && computerScore != 5) {
+    var gameover = true;
+    document.getElementById("winner").innerHTML="You are the winner!!";
+} else if (computerScore === 5 && userScore != 5) {
+    var gameover = true;
+    document.getElementById("winner").innerHTML="The computer is the winner!!";
+} else {
+    var gameover = false;
+}
