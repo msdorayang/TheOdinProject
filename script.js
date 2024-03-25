@@ -20,19 +20,31 @@ function getComputerChoice(){
 }
 
 //users select their choice
-function getUserChoice () {
-    var userChoice = prompt ("rock, paper, or scissors?").toLowerCase();
-    return userChoice;
-}
+// function getUserChoice () {
+//     var userChoice = prompt ("rock, paper, or scissors?").toLowerCase();
+//     return userChoice;
+// }
+
+// event listener to the buttons that call playRound function with the correct userChoice when a button is clicked
+const buttons = document.querySelectorAll('.choice');
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        var userChoice = button.textContent;
+        playRound(userChoice);
+    })
+})
 
 //function to play single round
-function playRound () {
+function playRound (userChoice) {
     // variations call the function to save the return value of the call
     var computerChoice = getComputerChoice();
-    var userChoice = getUserChoice();
-    console.log("You've selected " + userChoice);
-    console.log("The computer has selected " + computerChoice);
+    var roundResult = result(userChoice, computerChoice);
+    var scoreBoard = "Computer: " + computerScore + "  |  You: " + userScore;
+    var resultMsg = "You have selected " + userChoice + "\nThe computer has selected " + computerChoice + "\n" + roundResult + "\n" + scoreBoard;
+    console.log(resultMsg);
+}
     // user and computer with same choice
+function result (userChoice, computerChoice) {
     if (userChoice === "rock" && computerChoice === "rock" || userChoice === "scissors" && computerChoice === "scissors" || userChoice === "paper" && computerChoice === "paper") {
         userScore = ++userScore;
         computerScore = ++computerScore;
@@ -50,9 +62,11 @@ function playRound () {
     } else {
         roundResult = "Invalid Entry!";
     }
-    console.log(roundResult);
-    console.log("Computer: " + computerScore + "  |  You: " + userScore);
+    return roundResult;
 }
+
+
+
 
 //10 rounds rps with a final score
 function playGame() {
