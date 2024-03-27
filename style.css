@@ -36,9 +36,8 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 34rem;
-    height: 34rem;
-    padding: 1rem;
+    width: 32rem;
+    height: 32rem;
 }
 .row {
     display: flex;

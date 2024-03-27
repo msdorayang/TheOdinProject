@@ -22,3 +22,8 @@ for (const pixel of boxes) {
 }
 
 const btn = document.querySelector("button");
+btn.addEventListener("click", () => {
+    do {
+        var size = parseInt(window.prompt("please eneter a number from 1 to 100", ""), 10);
+    } while (isNaN(size) || size > 100 || size < 1);
+})
