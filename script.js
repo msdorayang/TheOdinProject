@@ -3,8 +3,8 @@ const container = document.createElement('div');
 container.id = 'container';
 content.appendChild(container);
 
-var size = 10;
-function createGrid() {
+var size;
+function createGrid(size) {
     for (var j = 0; j < size; j++) {
         const row = document.createElement('div');
         row.className = 'row';
@@ -26,14 +26,13 @@ function createGrid() {
         })
 }
 }
-createGrid();
+createGrid(10);
 
 const btn = document.querySelector("button");
 btn.addEventListener("click", () => {
     do {
         var size = parseInt(window.prompt("please eneter a number from 1 to 100", ""), 10);
     } while (isNaN(size) || size > 100 || size < 1);
-    console.log(size);
     container.innerHTML = '';
-    createGrid();
+    createGrid(size);
 })
