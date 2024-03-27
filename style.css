@@ -30,8 +30,6 @@ button:hover {
     color: salmon;
     transition: 0.1s;
 }
-.top {
-}
 .container {
     display: flex;
     flex-wrap: wrap;

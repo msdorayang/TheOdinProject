@@ -20,13 +20,15 @@ function createGrid(size) {
         }
     }
     const boxes = document.querySelectorAll('.box');
+    var colors = ['salmon', '#ffd480', '#f5f5dc', '#a6bba1', '#a2c4c9', '#7c6b9c']
     for (const pixel of boxes) {
         pixel.addEventListener("mouseover", () => {
-            pixel.style.backgroundColor = "salmon";
+            var randomColor = colors[(Math.floor(Math.random() * colors.length))];
+            pixel.style.backgroundColor = randomColor;
         })
 }
 }
-createGrid(10);
+createGrid(16);
 
 const btn = document.querySelector("button");
 btn.addEventListener("click", () => {
