@@ -38,19 +38,20 @@ button:hover {
     justify-content: center;
     width: 32rem;
     height: 32rem;
+    aspect-ratio: 1 / 1;
 }
 .row {
     display: flex;
     flex-direction: row;
     align-content: stretch;
     width: 32rem;
-    height: 2rem;
+    height: calc(32rem/16);
 }
 
 .box {
     display: block;
     background-color: linen;
     border: 0.1rem dotted whitesmoke;
-    width: 2rem;
-    height: 2rem;
+    width: calc(32rem/16);
+    height: calc(32rem/16);
 }
