@@ -1,2 +1,3 @@
-This is made for the Odin Project by me!
-Etch-A-Sketch
+In this project, I practiced using flexbox to make a grid and Javascript to make it dynamically change based on the user input.
+
+I used an array of muted colours for the interaction.
