@@ -1,6 +1,6 @@
 const container = document.createElement('div');
 container.id = 'container';
-document.getElementsByTagName('body')[0].appendChild(container);
+document.getElementById('content').appendChild(container);
 
 for (var j = 0; j < 16; j++) {
     const row = document.createElement('div');
@@ -20,3 +20,5 @@ for (const pixel of boxes) {
         pixel.style.backgroundColor = "salmon";
     })
 }
+
+const btn = document.querySelector("button");
