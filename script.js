@@ -13,3 +13,10 @@ for (var j = 0; j < 16; j++) {
         row.appendChild(box);
     }
 }
+
+const boxes = document.querySelectorAll('.box');
+for (const pixel of boxes) {
+    pixel.addEventListener("mouseover", () => {
+        pixel.style.backgroundColor = "salmon";
+    })
+}
