@@ -3,15 +3,16 @@
 body {
     display: flex;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 1rem;
     text-align: center;
     font-family: "Cute Font", sans-serif;
+    color: salmon;
 }
 h1 {
     margin: 0;
+    font-size: 6rem;
 }
 button {
-    position: absolue;
     padding-top: 1rem;
     padding-bottom: 0.75rem;
     padding-left: 1.5rem;
@@ -19,7 +20,7 @@ button {
     margin-bottom: 2rem;
     border-radius: 5rem;
     background-color: salmon;
-    color: whitesmoke;
+    color: rgb(255, 234, 225);
     border: none;
     font-family: "Cute Font", sans-serif;
     font-weight: bold;
