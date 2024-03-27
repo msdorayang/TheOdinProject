@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 34rem;
+    height: 34rem;
+    padding: 1rem;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    width: 32rem;
+    height: 2rem;
+}
+
+.box {
+    display: block;
+    background-color: pink;
+    border: 0.1rem dotted whitesmoke;
+    width: 2rem;
+    height: 2rem;
+}
