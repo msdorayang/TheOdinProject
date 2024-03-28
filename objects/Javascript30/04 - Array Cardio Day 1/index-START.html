@@ -107,6 +107,18 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
+    const sumTransportation = data.reduce(function(obj, item) {
+      // if there is no object
+      if (!obj[item]) {
+        obj[item] = 0;
+      }
+      // loop count objects if it exists
+      obj[item]++;
+      return obj;
+      // start with blank objects
+    }, {});
+    console.log(sumTransportation);
+
   </script>
 </body>
 </html>
