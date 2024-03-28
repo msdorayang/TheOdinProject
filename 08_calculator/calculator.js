@@ -26,7 +26,8 @@ const factorial = function(a) {
     // store the value of a at each iteration
     a = a * i;
   }
-  return a;
+  let product = a;
+  return product;
 };
 
 // Do not edit below this line
