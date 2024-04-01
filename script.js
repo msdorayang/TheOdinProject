@@ -1,8 +1,12 @@
 // initialize variables
-let displayValue = 0;
 let num1 = '';
 let num2 = '';
 let operator = '';
+
+// set up display window
+let displayValue = 0;
+const display = document.querySelector(".display");
+display.innerHTML = displayValue;
 
 // digit buttons and operators
 const digits = document.querySelectorAll(".digit");
@@ -14,10 +18,12 @@ digits.forEach(digit => {
         if (operator === '') {
             num1 += e.target.innerText;
             displayValue = num1;
+            display.innerHTML = displayValue;
             console.log(displayValue);
         } else {
             num2 += e.target.innerText;
             displayValue = num2;
+            display.innerHTML = displayValue;
             console.log(displayValue);
         }
     });
@@ -34,18 +40,26 @@ operators.forEach(op => {
 // basic functions
 function add(a, b) {
     num1 = parseInt(a) + parseInt(b);
+    displayValue = num1;
+    display.innerHTML = displayValue;
     return num1;
   };
 function subtract (a, b) {
     num1 = parseInt(a) - parseInt(b);
+    displayValue = num1;
+    display.innerHTML = displayValue;
     return num1;
   };
 function multiply(a, b) {
     num1 = parseInt(a) * parseInt(b);
+    displayValue = num1;
+    display.innerHTML = displayValue;
     return num1;
   };
 function divide(a, b) {
     num1 = parseInt(a) / parseInt(b);
+    displayValue = num1;
+    display.innerHTML = displayValue;
     return num1;
 }
 
@@ -55,7 +69,7 @@ function clearAll() {
     num1 = '';
     num2 = '';
     operator = '';
-    displayValue = '';
+    displayValue = 0;
 }
 clear.addEventListener("click", clearAll);
 
@@ -77,9 +91,4 @@ function execution(num1, num2, operator) {
 }
 equal.addEventListener("click", execution);
 
-
-
-
-const decimal = document.querySelector(".decimal");
-
-const display = document.querySelector(".display");
+// const decimal = document.querySelector(".decimal");
