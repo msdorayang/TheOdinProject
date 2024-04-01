@@ -110,4 +110,10 @@ function execution(a, b, o) {
 equal.addEventListener("click", (a,b,o) => {
     execution(a,b,o);
 });
+
+
+// Next Steps
+// run execution function when using all operators except for the first one
+// round answers to 2 decimals
+// display error message when user tries to divide by 0
 // const decimal = document.querySelector(".decimal");
