@@ -76,7 +76,7 @@ button {
     font-family: "Lilita One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1rem;
+    font-size: 2rem;
     border-radius: 0;
 }
 
@@ -84,12 +84,8 @@ button.digit,button.decimal,button.clear{
     width: 33.333333333333333333%;
 }
 
-button.operator{
+button.operator,button.execute{
     width: 99.999999999999999999%;
     background-color: orangered;
-    color: white;
-}
-button.execute{
-    width: 99.999999999999999999%;
-    background-color: lightslategray;
+    color: #ffffff;
 }
