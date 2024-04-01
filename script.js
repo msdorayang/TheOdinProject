@@ -22,7 +22,13 @@ var num2;
 // operator
 var operator = [add, subtract, multiply, divide];
 
-// create operate function
+// operate function
 function operate(num1, operator, num2) {
     return operator(num1, num2);
+}
+
+// display storage
+var displayValue;
+function display(array) {
+    
 }
