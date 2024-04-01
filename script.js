@@ -1,15 +1,28 @@
-const add = function(a, b) {
+function add(a, b) {
     return a + b;
   };
   
-const subtract = function(a, b) {
+function subtract (a, b) {
     return a - b;
   };
 
-const multiply = function(a, b) {
+function multiply(a, b) {
     return a * b;
   };
 
-const divide = function(a, b) {
+function divide(a, b) {
     return a / b;
+}
+
+// create variables for each part of an operation
+// first number
+var num1;
+// second number
+var num2;
+// operator
+var operator = [add, subtract, multiply, divide];
+
+// create operate function
+function operate(num1, operator, num2) {
+    return operator(num1, num2);
 }
