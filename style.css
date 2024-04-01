@@ -84,7 +84,7 @@ button.digit,button.decimal,button.clear{
     width: 33.333333333333333333%;
 }
 
-button.operator,button.execute{
+button.operator,button.equal{
     width: 99.999999999999999999%;
     background-color: orangered;
     color: #ffffff;
