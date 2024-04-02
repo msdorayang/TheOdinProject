@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript Test</title>
+        <script src="javascript.js" defer></script>
+    </head>
+    <body>
+        <button>Start Machine</button>
+        <p>The machine is stopped.</p>
+
+        <script>
+            // exercise 1 - Add 2 numbers together! (just type console.log(23 + 97) into your HTML file)
+            console.log(23 + 97);
+            // exercise 2 - Add a sequence of 6 different numbers together.
+            console.log(12 + 52 + 70 + 47 + 1.3 + 52);
+            // exercise 3 - Print the solution to the following equation: (4 + 6 + 9) / 77
+            console.log((4 + 6 + 9) / 77);
+            // exercise 4 - Type this statement at the top of the script tag: let a = 10
+            let a = 10;
+            // In the console console.log(a) should print 10
+            console.log(a);
+            // Try the following in the console: 9 * a
+            // and this: let b = 7 * a (returns undefined *) and then console.log(b)
+            let b = 7 * a;
+            console.log(b);
+            // exercise 5 - Declare a constant variable MAX with the value 57
+            const MAX = 56;
+            // Set another variable actual to MAX - 13
+            let actual = MAX - 13;
+            // Set another variable percentage to actual / MAX
+            let percentage = actual / MAX;
+            // If you type percentage in the console and press Enter you should see a value like 0.7719
+            // exercise 6 - Take a few minutes to keep playing around with various things in your script tag. Eventually, we will learn how to actually make those numbers and things show up on the webpage, but all of this logic will remain the same, so make sure you’re comfortable with it before moving on.
+            let firstRoll = Math.floor(Math.random() * 7);
+            let secondRoll = Math.floor(Math.random() * 7);
+            sumOfRolls = firstRoll + secondRoll;
+            console.log("First Roll is " +firstRoll);
+            console.log("Second Roll is " + secondRoll);
+            console.log("The sum is " + sumOfRolls);
+        </script>
+    </body>
+</html>
