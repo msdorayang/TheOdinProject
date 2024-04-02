@@ -2,7 +2,7 @@
 let num1 = '';
 let num2 = '';
 let operator = '';
-
+let firstOperator=true;
 // set up display window
 
 let displayValue = 0;
@@ -18,6 +18,7 @@ function clearAll() {
     num2 = '';
     operator = '';
     displayValue = 0;
+    firstOperator= true;
     updateDisplay();
 }
 clear.addEventListener("click", clearAll);
@@ -43,9 +44,28 @@ digits.forEach(digit => {
 
 // call each operator button
 operators.forEach(op => {
+    op.addEventListener ("click", e => {
+        if (firstOperator != true) {
+            console.log("not first operator")
+            execution(num1,num2,operator);
+            operator = e.target.value;
+        } else 
+        {
+            console.log("first operator")
+            operator = e.target.value;
+            firstOperator = false;
+        }
+    })
+})
+
+
+operators.forEach(op => {
     op.addEventListener("click", e => {
         operator = e.target.value;
-    });
+        firstOperator = false;
+        function execution(a,b,o)
+        {            execution(a,b,o)
+    }});
 });
 
 // basic functions
@@ -110,6 +130,7 @@ function execution(a, b, o) {
 equal.addEventListener("click", (a,b,o) => {
     execution(a,b,o);
 });
+
 
 
 // Next Steps
