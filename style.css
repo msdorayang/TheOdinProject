@@ -9,8 +9,17 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 1rem;
+    color: orangered;
 }
-
+a {
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: orangered;
+}
+a:hover {
+    color: orange;
+}
 .heading {
     text-align: center;
     padding: 0;
