@@ -3,12 +3,13 @@ let num1 = '';
 let num2 = '';
 let operator = '';
 let firstOperator=true;
-// set up display window
 
+// set up display window
 let displayValue = 0;
 const display = document.querySelector(".display");
 function updateDisplay() {
-    display.innerHTML = displayValue
+    // round display value to the 3rd decimal place
+    display.innerHTML = Math.round(displayValue * 1000) / 1000;
 }
 updateDisplay();
 // clear button function
@@ -18,7 +19,7 @@ function clearAll() {
     num2 = '';
     operator = '';
     displayValue = 0;
-    firstOperator= true;
+    firstOperator = true;
     updateDisplay();
 }
 clear.addEventListener("click", clearAll);
@@ -111,6 +112,12 @@ function execution(a, b, o) {
     b = parseInt(num2);
     o = operator;
     console.log(a + " " + o + " " + b);
+    if (o === "divide" && b === 0) {
+        num1 = '';
+        num2 = '';
+        operator = '';
+        display.innerHTML = "ERR0R";
+    } else {
     if (o === "add") {
         return add(a, b);
     }
@@ -124,8 +131,8 @@ function execution(a, b, o) {
         return divide (a, b);
     }
     else {
-        return "ERROR";
-    }
+        display.innerHTML = "ERROR";
+    }}
 }
 equal.addEventListener("click", (a,b,o) => {
     execution(a,b,o);
@@ -134,7 +141,6 @@ equal.addEventListener("click", (a,b,o) => {
 
 
 // Next Steps
-// run execution function when using all operators except for the first one
 // round answers to 2 decimals
 // display error message when user tries to divide by 0
 // const decimal = document.querySelector(".decimal");
