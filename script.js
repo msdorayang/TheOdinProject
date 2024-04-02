@@ -53,6 +53,8 @@ operators.forEach(op => {
             console.log("not first operator")
             execution(num1,num2,operator);
             operator = e.target.value;
+            canDecimalNum1 = true;
+            canDecimalNum2 = true;
         } else 
         {
             console.log("first operator")
@@ -61,16 +63,6 @@ operators.forEach(op => {
         }
     })
 })
-
-
-operators.forEach(op => {
-    op.addEventListener("click", e => {
-        operator = e.target.value;
-        firstOperator = false;
-        function execution(a,b,o)
-        {            execution(a,b,o)
-    }});
-});
 
 // basic functions
 function readyNextOperation () {
@@ -139,6 +131,8 @@ function execution(a, b, o) {
 }
 equal.addEventListener("click", (a,b,o) => {
     execution(a,b,o);
+    canDecimalNum1 = true;
+    canDecimalNum2 = true;
 });
 
 // add decimal button
