@@ -10,7 +10,11 @@ assignees: ""
 
 Complete the following REQUIRED checkboxes:
 -   [ ] I have thoroughly read and understand [The Odin Project Contributing Guide](https://github.com/TheOdinProject/.github/blob/main/CONTRIBUTING.md)
+<<<<<<< HEAD
 -   [ ] The title of this issue follows the `location for request: brief description of request` format, e.g. `Foundations exercises: Add exercise for XYZ`
+=======
+-   [ ] The title of this issue follows the `location for request: brief description of request` format, e.g. `Exercises: Add exercise on XYZ`
+>>>>>>> Exercises-Javascript/TOP-prep
 
 The following checkbox is OPTIONAL:
 <!-- Completing this checkbox does not guarantee you will be assigned this issue, but rather lets us know you are interested in working on it. -->

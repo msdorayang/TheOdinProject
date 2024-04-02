@@ -10,7 +10,11 @@ assignees: ""
 
 Complete the following REQUIRED checkboxes:
 -   [ ] I have thoroughly read and understand [The Odin Project Contributing Guide](https://github.com/TheOdinProject/.github/blob/main/CONTRIBUTING.md)
+<<<<<<< HEAD
 -   [ ] The title of this issue follows the `Bug - location of bug: brief description of bug` format, e.g. `Bug - Grid exercises: CSS not properly linked to HTML files`
+=======
+-   [ ] The title of this issue follows the `Bug - location of bug: brief description of bug` format, e.g. `Bug - Exercises: File type incorrect for all test files`
+>>>>>>> Exercises-Javascript/TOP-prep
 
 The following checkbox is OPTIONAL:
 <!-- Completing this checkbox does not guarantee you will be assigned this issue, but rather lets us know you are interested in working on it. -->
